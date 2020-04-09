@@ -1,4 +1,13 @@
-
+- task: CodeDeployDeployApplication@1
+  inputs:
+    awsCredentials: 'AzureToAWS'
+    regionName: 'us-east-2'
+    applicationName: 'Demo-app-3-tom'
+    deploymentGroupName: 'demo-3g'
+    deploymentRevisionSource: 'workspace'
+    revisionBundle: 'target'
+    bucketName: 'deploy-jenkins-bucket'
+    fileExistsBehavior: 'OVERWRITE'
 # Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
