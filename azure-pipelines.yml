@@ -5,8 +5,6 @@
 
 trigger:
 - master
-
-pool:
 - task: CodeDeployDeployApplication@1
   inputs:
     awsCredentials: 'AzureToAWS'
@@ -14,11 +12,8 @@ pool:
     applicationName: 'Demo-app-3-tom'
     deploymentGroupName: 'demo-3g'
     deploymentRevisionSource: 'workspace'
-    revisionBundle: 'target'
+    revisionBundle: 'mvn-hello-world'
     bucketName: 'deploy-jenkins-bucket'
-    fileExistsBehavior: 'OVERWRITE'
-  vmImage: 'ubuntu-latest'
-
 steps:
 - task: Maven@3
   inputs:
