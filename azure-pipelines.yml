@@ -5,15 +5,7 @@
 
 trigger:
 - master
-- task: CodeDeployDeployApplication@1
-  inputs:
-    awsCredentials: 'AzureToAWS'
-    regionName: 'us-east-2'
-    applicationName: 'Demo-app-3-tom'
-    deploymentGroupName: 'demo-3g'
-    deploymentRevisionSource: 'workspace'
-    revisionBundle: 'mvn-hello-world'
-    bucketName: 'deploy-jenkins-bucket'
+
 steps:
 - task: Maven@3
   inputs:
