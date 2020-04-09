@@ -1,11 +1,5 @@
+
 # Maven
-- task: S3Upload@1
-  inputs:
-    awsCredentials: 'AzureToAWS'
-    regionName: 'us-east-2'
-    bucketName: 'deploy-jenkins-bucket'
-    globExpressions: '**'
-    filesAcl: 'public-read-write'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
